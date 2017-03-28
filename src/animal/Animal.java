@@ -51,10 +51,10 @@ public class Animal {
     public final HashSet<String> GetCompatible() {
         return new HashSet<String>();
     }
-    public final void Act() {
+    abstract public void Act() {
 
     }
-    public final void Interact() {
+    abstract public void Interact() {
 
     }
     public final void Description(String a) {

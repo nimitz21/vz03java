@@ -1,8 +1,6 @@
-package animal.real_animal;
+package animal.bat;
 import animal.Animal;
 import pair.Pair;
-
-import java.security.PublicKey;
 
 /**
  * Created by asuspc on 3/28/2017.
