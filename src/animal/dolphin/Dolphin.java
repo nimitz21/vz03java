@@ -4,9 +4,24 @@ import animal.Animal;
 import pair.Pair;
 
 /**
- * Created by asuspc on 3/28/2017.
+ * Kelas untuk merepresentasikan real animal yaitu dolphin.
+ *
+ * @author Vigor Akbar
+ * @version %I%, %G%
  */
 public class Dolphin extends Animal {
+    /**
+     * Counter untuk jumlah dolphin yang telah dibuat
+     * (termasuk yang tidak dapat masuk ke dalam kandang).
+     */
+    private static int dolphin_nb;
+    /**
+     * Konstruktor untuk menciptakan <code>dolphin</code> pada posisi tertentu
+     * dengan berat tertentu.
+     *
+     * @param _weight berat dolphin yang diinginkan
+     * @param _position posisi dolphin yang diinginkan
+     */
     public Dolphin(double _weight, Pair _position) {
         super("DLP", ++dolphin_nb,'!', _weight, 0.4, 'K', _position);
         habitat.add(new Character('W'));
@@ -21,6 +36,11 @@ public class Dolphin extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
+    /**
+     * Konstruktor untuk menciptakan <code>dolphin</code> pada posisi tertentu.
+     *
+     * @param _position posisi dolphin yang diinginkan
+     */
     public Dolphin(Pair _position) {
         super("DLP", ++dolphin_nb,'!', 226, 0.4, 'K', _position);
         habitat.add(new Character('W'));
@@ -35,6 +55,11 @@ public class Dolphin extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
+    /**
+     * Mencetak kelakuan dolphin ke layar.
+     * I.S.: sembarang.
+     * F.S.: pada layar tercetak apa yang dilakukan dolphin.
+     */
     public final void Act() {
         System.out.print(id+"-");
         if (number < 10) {
@@ -43,9 +68,14 @@ public class Dolphin extends Animal {
         System.out.print(number+": ");
         System.out.println("*click*");
     }
+    /**
+     * Mencetak deskripsi dan kelakuan dolphin pada layar.
+     * I.S.: sembarang.
+     * F.S.: pada layar tercetak hasil interaksi
+     * dengan dolphin (deskripsi dan kelakuan).
+     */
     public final void Interact() {
         Description("dolphin");
         Act();
     }
-    private static int dolphin_nb;
 }

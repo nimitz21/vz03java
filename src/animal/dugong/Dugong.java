@@ -7,6 +7,18 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Dugong extends Animal {
+    /**
+     * Counter untuk jumlah dolphin yang telah dibuat
+     * (termasuk yang tidak dapat masuk ke dalam kandang).
+     */
+    private static int dugong_nb;
+    /**
+     * Konstruktor untuk menciptakan <code>Dugong</code> pada posisi tertentu
+     * dengan berat tertentu.
+     *
+     * @param _weight berat Dugong yang diinginkan
+     * @param _position posisi Dugong yang diinginkan
+     */
     public Dugong(double _weight, Pair _position) {
         super("DGG", ++dugong_nb,'9', _weight, 0.4, 'H', _position);
         habitat.add(new Character('W'));
@@ -21,6 +33,11 @@ public class Dugong extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
+    /**
+     * Konstruktor untuk menciptakan <code>Dugong</code> pada posisi tertentu.
+     *
+     * @param _position posisi Dugong yang diinginkan
+     */
     public Dugong(Pair _position) {
         super("DGG", ++dugong_nb,'9', 294, 0.4, 'K', _position);
         habitat.add(new Character('W'));
@@ -35,6 +52,11 @@ public class Dugong extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
+    /**
+     * Mencetak kelakuan Dugong ke layar.
+     * I.S.: sembarang.
+     * F.S.: pada layar tercetak apa yang dilakukan Dugong.
+     */
     public final void Act() {
         System.out.print(id+"-");
         if (number < 10) {
@@ -43,9 +65,14 @@ public class Dugong extends Animal {
         System.out.print(number+": ");
         System.out.println("*splash*");
     }
+    /**
+     * Mencetak deskripsi dan kelakuan Dugong pada layar.
+     * I.S.: sembarang.
+     * F.S.: pada layar tercetak hasil interaksi
+     * dengan Dugong (deskripsi dan kelakuan).
+     */
     public final void Interact() {
         Description("dugong");
         Act();
     }
-    private static int dugong_nb;
 }
