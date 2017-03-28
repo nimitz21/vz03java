@@ -9,15 +9,28 @@ import renderable.Renderable;
  * @author Gisela Supardi
  * @version %I%, %G%
  */
-abstract class Cell implements Renderable {
-  /** simbol asli untuk sel dengan jenis tertentu*/
+public abstract class Cell implements Renderable {
+  /**
+   * simbol asli untuk sel dengan jenis tertentu
+   */
   protected Character initial_symbol;
 
-  /**< simbol yang akan ditampilkan pada layar (dapat dioverwrite animal)*/
+  /**
+   * simbol yang akan ditampilkan pada layar (dapat dioverwrite animal)
+   */
   protected Character symbol;
 
   /**
-   * Constructor dengan parameter.
+   * Konstruktor tanpa parameter.
+   * Menciptakan <code>Cell</code> dengan simbol <code>_initial_symbol</code>.
+   */
+  public Cell() {
+    initial_symbol = new Character('-');
+    symbol = new Character('-');
+  }
+
+  /**
+   * Konstruktor dengan parameter.
    * Menciptakan <code>Cell</code> dengan simbol <code>_initial_symbol</code>.
    *
    * @param _initial_symbol simbol yang ingin dijadikan input.
