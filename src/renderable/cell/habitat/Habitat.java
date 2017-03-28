@@ -44,7 +44,9 @@ public class Habitat extends Cell {
    *
    * @param direction arah yang ingin dibuka
    */
-  public void ToggleSekat(int direction) {}
+  public void ToggleSekat(int direction) {
+    sekat[direction] = !sekat[direction];
+  }
 
   /**
    * Mengecek apakah ke arah <code>direction</code>

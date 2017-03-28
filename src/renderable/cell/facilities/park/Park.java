@@ -82,7 +82,7 @@ public class Park extends Facility {
    * dengan <code>Park</code>, yaitu tanaman apa yang ditanam di sana.
    */
   public void Interact() {
-    System.out.print("This <code>Park</code> has ");
+    System.out.print("This Park has ");
     if (!"".equals(plant)) {
       System.out.print(plant);
     } else {
