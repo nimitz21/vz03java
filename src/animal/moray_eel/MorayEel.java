@@ -4,9 +4,22 @@ import animal.Animal;
 import pair.Pair;
 
 /**
- * Created by asuspc on 3/28/2017.
+ * Kelas untuk merepresentasikan real animal yaitu MorayEel.
+ *
+ * @author Vigor Akbar
+ * @version %I%, %G%
  */
 public class MorayEel extends Animal {
+    /**
+     * Counter untuk jumlah MorayEel yang telah dibuat
+     * (termasuk yang tidak dapat masuk ke dalam kandang).
+     */
+    private static int moray_eel_nb;
+    /**
+     * Konstruktor untuk menciptakan <code>MorayEel</code> pada posisi tertentu.
+     *
+     * @param _position posisi MorayEel yang diinginkan
+     */
     public MorayEel(Pair _position) {
         super("MRE", ++moray_eel_nb,'8', 13, 0.4, 'K', _position);
         habitat.add(new Character('W'));
@@ -17,6 +30,13 @@ public class MorayEel extends Animal {
         compatible.add(new String("WHL"));
         compatible.add(new String("HPP"));
     }
+    /**
+     * Konstruktor untuk menciptakan <code>MorayEel</code> pada posisi tertentu
+     * dengan berat tertentu.
+     *
+     * @param _weight berat MorayEel yang diinginkan
+     * @param _position posisi MorayEel yang diinginkan
+     */
     public MorayEel(double _weight, Pair _position) {
         super("MRE", ++moray_eel_nb,'8', _weight, 0.4, 'K', _position);
         habitat.add(new Character('W'));
@@ -27,6 +47,11 @@ public class MorayEel extends Animal {
         compatible.add(new String("WHL"));
         compatible.add(new String("HPP"));
     }
+    /**
+     * Mencetak kelakuan MorayEel ke layar.
+     * I.S.: sembarang.
+     * F.S.: pada layar tercetak apa yang dilakukan MorayEel.
+     */
     public final void Act() {
         System.out.print(id+"-");
         if (number < 10) {
@@ -35,9 +60,14 @@ public class MorayEel extends Animal {
         System.out.print(number+": ");
         System.out.println("*hide into rocks*");
     }
+    /**
+     * Mencetak deskripsi dan kelakuan MorayEel pada layar.
+     * I.S.: sembarang.
+     * F.S.: pada layar tercetak hasil interaksi
+     * dengan MorayEel (deskripsi dan kelakuan).
+     */
     public final void Interact() {
         Description("moray eel");
         Act();
     }
-    private static int moray_eel_nb;
 }

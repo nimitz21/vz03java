@@ -55,7 +55,6 @@ public class Shark extends Animal {
         System.out.print(number+": ");
         System.out.println("*cruise*");
     }
-
     /**
      * Mencetak deskripsi dan kelakuan hiu pada layar.
      * I.S.: sembarang.

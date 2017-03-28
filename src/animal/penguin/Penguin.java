@@ -81,7 +81,6 @@ public class Penguin extends Animal {
         System.out.print(number+": ");
         System.out.println("*slide*");
     }
-
     /**
      * Mencetak deskripsi dan kelakuan penguin pada layar.
      * I.S.: sembarang.

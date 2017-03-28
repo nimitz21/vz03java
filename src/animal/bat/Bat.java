@@ -3,9 +3,24 @@ import animal.Animal;
 import pair.Pair;
 
 /**
- * Created by asuspc on 3/28/2017.
+ * Kelas untuk merepresentasikan real animal yaitu bat.
+ *
+ * @author Vigor Akbar
+ * @version %I%, %G%
  */
 public class Bat extends Animal {
+    /**
+     * Counter untuk jumlah zebra yang telah dibuat
+     * (termasuk yang tidak dapat masuk ke dalam kandang).
+     */
+    private static int bat_nb;
+    /**
+     * Konstruktor untuk menciptakan <code>Bat</code> pada posisi tertentu
+     * dengan berat tertentu.
+     *
+     * @param _weight berat bat yang diinginkan
+     * @param _position posisi bat yang diinginkan
+     */
     public Bat(double _weight, Pair _position) {
         super("BT", ++bat_nb,'*', _weight, 0.4, 'O', _position);
         habitat.add(new Character('A'));
@@ -17,6 +32,11 @@ public class Bat extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
+    /**
+     * Konstruktor untuk menciptakan <code>Bat</code> pada posisi tertentu.
+     *
+     * @param _position posisi bat yang diinginkan
+     */
     public Bat(Pair _position) {
         super("BT", ++bat_nb,'*', 0.15, 0.4, 'O', _position);
         habitat.add(new Character('A'));
@@ -28,6 +48,11 @@ public class Bat extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
+    /**
+     * Mencetak kelakuan bat ke layar.
+     * I.S.: sembarang.
+     * F.S.: pada layar tercetak apa yang dilakukan bat.
+     */
     public final void Act() {
         System.out.print(id+"-");
         if (number < 10) {
@@ -36,9 +61,14 @@ public class Bat extends Animal {
         System.out.print(number+": ");
         System.out.println("*screech*");
     }
+    /**
+     * Mencetak deskripsi dan kelakuan bat pada layar.
+     * I.S.: sembarang.
+     * F.S.: pada layar tercetak hasil interaksi
+     * dengan bat (deskripsi dan kelakuan).
+     */
     public final void Interact() {
         Description("bat");
         Act();
     }
-    private static int bat_nb;
 }
