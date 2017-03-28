@@ -7,17 +7,52 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Elephant extends Animal {
-    public Elephant(Pair _posistion) {
-
+    public Elephant(String _id,
+                    int _number,
+                    char _legend,
+                    double _weight,
+                    double _eat,
+                    char _type,
+                    Pair _position) {
+        super("ELP", ++elephant_nb,'4', _weight, food, 'H', _position);
+        eat = food;
+        habitat.add(new Character('L'));
+        compatible.add(new String("WF"));
+        compatible.add(new String("ZBR"));
+        compatible.add(new String("ELP"));
+        compatible.add(new String("MCQ"));
+        compatible.add(new String("HG"));
+        compatible.add(new String("PNG"));
+        compatible.add(new String("HPP"));
     }
-    public Elephant(double _weight, Pair _position) {
-
+    public Elephant(String _id,
+                    int _number,
+                    char _legend,
+                    double _eat,
+                    char _type,
+                    Pair _position) {
+        super("ELP", ++elephant_nb,'4', 5000, food, 'H', _position);
+        eat = food;
+        habitat.add(new Character('L'));
+        compatible.add(new String("WF"));
+        compatible.add(new String("ZBR"));
+        compatible.add(new String("ELP"));
+        compatible.add(new String("MCQ"));
+        compatible.add(new String("HG"));
+        compatible.add(new String("PNG"));
+        compatible.add(new String("HPP"));
     }
     public final void Act() {
-
+        System.out.print(id+"-");
+        if (number < 10) {
+            System.out.print("0");
+        }
+        System.out.print(number+": ");
+        System.out.println("*trumpet*");
     }
     public final void Interact() {
-
+        Description("elephant");
+        Act();
     }
     private static int elephant_nb;
     private final double food = 0.4;
