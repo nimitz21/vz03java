@@ -14,9 +14,9 @@ public class Road extends Facility {
   /**
    * Konstruktor untuk menciptakan <code>Road</code>.
    */
-  public Road() {
-    initial_symbol = new Character('r');
-    symbol = new Character('r');
+  public Road(char r) {
+    initial_symbol = new Character(r);
+    symbol = new Character(r);
   }
 
   /**

@@ -18,7 +18,7 @@ public class Animal {
                   Pair _position) {
 
     }
-    public final String GetID() {
+    public final String GetId() {
         return "";
     }
     public final int GetNumber() {
@@ -34,10 +34,10 @@ public class Animal {
         return new Pair();
     }
     public final char GetType() {
-        return '';
+        return ' ';
     }
     public final char GetLegend() {
-        return '';
+        return ' ';
     }
     public final HashSet<Character> GetHabitat() {
         return new HashSet<Character>();
@@ -72,5 +72,5 @@ public class Animal {
     protected char type;
     protected Pair position;
     protected HashSet<String> compatible;
-    protected HashSet<char> habitat;
+    protected HashSet<Character> habitat;
 }
