@@ -18,12 +18,16 @@ public class Elephant extends Animal {
         compatible.add(new String("PNG"));
         compatible.add(new String("HPP"));
     }
+<<<<<<< HEAD
     public Elephant(String _id,
                     int _number,
                     char _legend,
                     double _eat,
                     char _type,
                     Pair _position) {
+=======
+    public Elephant(Pair _position) {
+>>>>>>> 141da59f18c22da035a8ba63889ffaa155bf59b1
         super("ELP", ++elephant_nb,'4', 5000, 0.4, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
