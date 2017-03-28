@@ -7,15 +7,8 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Hippopotamus extends Animal {
-    public Hippopotamus(String _id,
-                        int _number,
-                        char _legend,
-                        double _weight,
-                        double _eat,
-                        char _type,
-                        Pair _position) {
-        super("HPP", ++hippopotamus_nb,')', _weight, food, 'H', _position);
-        eat = food;
+    public Hippopotamus(double _weight, Pair _position) {
+        super("HPP", ++hippopotamus_nb,')', _weight, 0.4, 'H', _position);
         habitat.add('L');
         habitat.add('W');
         compatible.add("WF");
@@ -35,14 +28,8 @@ public class Hippopotamus extends Animal {
         compatible.add("GSE");
         compatible.add("CRN");
     }
-    public Hippopotamus(String _id,
-                        int _number,
-                        char _legend,
-                        double _eat,
-                        char _type,
-                        Pair _position) {
-        super("HPP", ++hippopotamus_nb,')', 1496, food, 'H', _position);
-        eat = food;
+    public Hippopotamus(Pair _position) {
+        super("HPP", ++hippopotamus_nb,')', 1496, 0.4, 'H', _position);
         habitat.add('L');
         habitat.add('W');
         compatible.add("WF");
@@ -75,5 +62,4 @@ public class Hippopotamus extends Animal {
         Act();
     }
     private static int hippopotamus_nb;
-    private final double food = 0.4;
 }

@@ -7,15 +7,8 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Elephant extends Animal {
-    public Elephant(String _id,
-                    int _number,
-                    char _legend,
-                    double _weight,
-                    double _eat,
-                    char _type,
-                    Pair _position) {
-        super("ELP", ++elephant_nb,'4', _weight, food, 'H', _position);
-        eat = food;
+    public Elephant(double _weight, Pair _position) {
+        super("ELP", ++elephant_nb,'4', _weight, 0.4, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
         compatible.add(new String("ZBR"));
@@ -25,14 +18,8 @@ public class Elephant extends Animal {
         compatible.add(new String("PNG"));
         compatible.add(new String("HPP"));
     }
-    public Elephant(String _id,
-                    int _number,
-                    char _legend,
-                    double _eat,
-                    char _type,
-                    Pair _position) {
-        super("ELP", ++elephant_nb,'4', 5000, food, 'H', _position);
-        eat = food;
+    public Elephant(Pair _position) {
+        super("ELP", ++elephant_nb,'4', 5000, 0.4, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
         compatible.add(new String("ZBR"));
@@ -55,5 +42,4 @@ public class Elephant extends Animal {
         Act();
     }
     private static int elephant_nb;
-    private final double food = 0.4;
 }

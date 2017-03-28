@@ -7,15 +7,8 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Dugong extends Animal {
-    public Dugong(String _id,
-                  int _number,
-                  char _legend,
-                  double _weight,
-                  double _eat,
-                  char _type,
-                  Pair _position) {
-        super("DGG", ++dugong_nb,'9', _weight, food, 'H', _position);
-        eat = food;
+    public Dugong(double _weight, Pair _position) {
+        super("DGG", ++dugong_nb,'9', _weight, 0.4, 'H', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));
@@ -28,14 +21,8 @@ public class Dugong extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
-    public Dugong(String _id,
-                  int _number,
-                  char _legend,
-                  double _eat,
-                  char _type,
-                  Pair _position) {
-        super("DGG", ++dugong_nb,'9', 294, food, 'K', _position);
-        eat = food;
+    public Dugong(Pair _position) {
+        super("DGG", ++dugong_nb,'9', 294, 0.4, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));

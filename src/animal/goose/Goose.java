@@ -8,15 +8,8 @@ import sun.security.krb5.internal.crypto.Des;
  * Created by asuspc on 3/28/2017.
  */
 public class Goose extends Animal {
-    public Goose(String _id,
-                 int _number,
-                 char _legend,
-                 double _weight,
-                 double _eat,
-                 char _type,
-                 Pair _position) {
-        super("GSE", ++goose_nb,'+', _weight, food, 'H', _position);
-        eat = food;
+    public Goose(double _weight, Pair _position) {
+        super("GSE", ++goose_nb,'+', _weight, 0.4, 'H', _position);
         habitat.add('W');
         habitat.add('A');
         compatible.add("MRE");
@@ -36,14 +29,8 @@ public class Goose extends Animal {
         compatible.add("CLG");
         compatible.add("SGL");
     }
-    public Goose(String _id,
-                 int _number,
-                 char _legend,
-                 double _eat,
-                 char _type,
-                 Pair _position) {
-        super("GSE", ++goose_nb,'+', 4, food, 'H', _position);
-        eat = food;
+    public Goose(Pair _position) {
+        super("GSE", ++goose_nb,'+', 4, 0.4, 'H', _position);
         habitat.add('W');
         habitat.add('A');
         compatible.add("MRE");
@@ -76,5 +63,4 @@ public class Goose extends Animal {
         Act();
     }
     private static int goose_nb;
-    private final double food = 0.4;
 }

@@ -7,15 +7,8 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class DracoLizard extends Animal {
-    public DracoLizard(String _id,
-                       int _number,
-                       char _legend,
-                       double _weight,
-                       double _eat,
-                       char _type,
-                       Pair _position) {
-        super("DRL", ++draco_lizard_nb,'=', _weight, food, 'K', _position);
-        eat = food;
+    public DracoLizard(double _weight, Pair _position) {
+        super("DRL", ++draco_lizard_nb,'=', _weight, 0.4, 'K', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
         compatible.add(new String("ZBR"));
@@ -30,14 +23,8 @@ public class DracoLizard extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
-    public DracoLizard(String _id,
-                       int _number,
-                       char _legend,
-                       double _eat,
-                       char _type,
-                       Pair _position) {
-        super("DRL", ++draco_lizard_nb,'=', 0.2, food, 'K', _position);
-        eat = food;
+    public DracoLizard(Pair _position) {
+        super("DRL", ++draco_lizard_nb,'=', 0.2, 0.4, 'K', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
         compatible.add(new String("ZBR"));
@@ -65,5 +52,4 @@ public class DracoLizard extends Animal {
         Act();
     }
     private static int draco_lizard_nb;
-    private final double food = 0.4;
 }
