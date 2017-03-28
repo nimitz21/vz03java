@@ -1,7 +1,23 @@
 package pair;
 
 /**
- * Created by ASUS INDONESIA on 3/28/2017.
+ * Created by Reinaldo on 3/27/2017.
  */
 public class Pair {
+  public int first;
+  public int second;
+
+  public Pair() {
+    first = 0;
+    second = 0;
+  }
+
+  public Pair(int _first, int _second) {
+    first = _first;
+    second = _second;
+  }
+
+  public boolean Equals(Pair pair) {
+    return first == pair.first && second == pair.second;
+  }
 }
