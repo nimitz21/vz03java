@@ -10,7 +10,6 @@ import sun.security.krb5.internal.crypto.Des;
 public class Goose extends Animal {
     public Goose(double _weight, Pair _position) {
         super("GSE", ++goose_nb,'+', _weight, 0.4, 'H', _position);
-<<<<<<< HEAD
         habitat.add(new Character('W'));
         habitat.add(new Character('A'));
         compatible.add(new String("MRE"));
@@ -50,47 +49,6 @@ public class Goose extends Animal {
         compatible.add(new String("BT"));
         compatible.add(new String("CLG"));
         compatible.add(new String("SGL"));
-=======
-        habitat.add('W');
-        habitat.add('A');
-        compatible.add("MRE");
-        compatible.add("DGG");
-        compatible.add("TRL");
-        compatible.add("DLP");
-        compatible.add("WHL");
-        compatible.add("PNG");
-        compatible.add("HPP");
-        compatible.add("PLC");
-        compatible.add("GSE");
-        compatible.add("CRN");
-        compatible.add("HMB");
-        compatible.add("CKT");
-        compatible.add("RBN");
-        compatible.add("BT");
-        compatible.add("CLG");
-        compatible.add("SGL");
-    }
-    public Goose(Pair _position) {
-        super("GSE", ++goose_nb,'+', 4, 0.4, 'H', _position);
-        habitat.add('W');
-        habitat.add('A');
-        compatible.add("MRE");
-        compatible.add("DGG");
-        compatible.add("TRL");
-        compatible.add("DLP");
-        compatible.add("WHL");
-        compatible.add("PNG");
-        compatible.add("HPP");
-        compatible.add("PLC");
-        compatible.add("GSE");
-        compatible.add("CRN");
-        compatible.add("HMB");
-        compatible.add("CKT");
-        compatible.add("RBN");
-        compatible.add("BT");
-        compatible.add("CLG");
-        compatible.add("SGL");
->>>>>>> 141da59f18c22da035a8ba63889ffaa155bf59b1
     }
     public final void Act() {
         System.out.print(id+"-");

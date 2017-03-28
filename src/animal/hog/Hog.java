@@ -9,7 +9,6 @@ import pair.Pair;
 public class Hog extends Animal {
     public Hog(double _weight, Pair _position) {
         super("HG", ++hog_nb,'6', _weight, 0.4, 'O', _position);
-<<<<<<< HEAD
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
         compatible.add(new String("ELP"));
@@ -25,12 +24,6 @@ public class Hog extends Animal {
         compatible.add(new String("MCQ"));
         compatible.add(new String("HG"));
         compatible.add(new String("HPP"));
-=======
-
-    }
-    public Hog(Pair _position) {
-        super("HG", ++hog_nb,'6', 68, 0.4, 'O', _position);
->>>>>>> 141da59f18c22da035a8ba63889ffaa155bf59b1
     }
     public final void Act() {
         System.out.print(id+"-");
