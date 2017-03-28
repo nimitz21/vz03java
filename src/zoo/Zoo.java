@@ -13,36 +13,47 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
- * \brief Class Zoo
- * \details Kelas Zoo yang berisi kebun binatang itu sendiri beserta hewan-hewannya
+ * Kelas yang berisi kebun binatang itu sendiri beserta hewan-hewannya
+ *
+ * @author Reinaldo Ignatius Wijaya
+ * @version %I%, %G%
  */
 public class Zoo {
+	/**
+	 * dimensi <code>Zoo</code>jumlah baris
+	 */
   private int width;
-  /**
-   * < dimensi zoo; jumlah baris
-   */
-  private int length;
-  /**
-   * < dimensi zoo; jumlah kolom
-   */
-  private Cell[][] cells;
-  /**
-   * < matriks Cell yang dimiliki zoo
-   */
-  private ArrayList<Animal> animals;
-  /**
-   * < daftar Animals yang ada dalam zoo
-   */
-  private int[][] cage_map;
-  /**
-   * < matriks penanda nomor cage dalam zoo
-   */
-  private int cage_nb; /**< jumlah cage yang ada dalam zoo*/
-  /**
-   * \brief initCage
-   * \details Mengenerate cage dari matrix cell
-   */
 
+	/**
+	 * dimensi <code>Zoo</code> jumlah kolom
+	 */
+  private int length;
+
+	/**
+	 * matriks <code>Cell</code> yang dimiliki <code>Zoo</code>
+	 */
+  private Cell[][] cells;
+
+	/**
+	 * daftar <code>Animal</code> yang ada dalam <code>Zoo</code>
+	 */
+  private ArrayList<Animal> animals;
+
+	/**
+	 * matriks penanda nomor cage dalam <code>Zoo</code>
+	 */
+  private int[][] cage_map;
+
+	/**
+	 *  jumlah cage yang ada dalam zoo
+	 */
+  private int cage_nb; /**< jumlah cage yang ada dalam zoo*/
+
+	/**
+	 * CageInit
+	 * I.S: <code>cage_map</code> tidak terdefenisi
+	 * F.S: <code>cage_map</code> terdefenisi
+	 */
   private void CageInit() {
     cage_map = new int[width][length];
     for (int i = 0; i < width; ++i) {
@@ -175,6 +186,16 @@ public class Zoo {
     }
   }
 
+	/**
+	 * NewAnimal
+	 * I.S: <code>id</code>, <code>weight</code>, dan <code>position</code> terdefenisi
+	 * F.S: <code>AddAnimal</code> dipanggil dengan parameter <code>Animal</code> yang dialokasi berdasarkan parameter
+	 *      <code>NewAnimal</code>
+	 *
+	 * @param id id hewan yang ingin ditambahkan
+	 * @param weight berat badan hewan yang ingin ditambahkan
+	 * @param position posisi di mana hewan ingin diletakkan
+	 */
   private void NewAnimal(String id, float weight, Pair position) {
     Animal animal;
     if (id.equals("WF")) {
@@ -337,6 +358,15 @@ public class Zoo {
     //AddAnimal(animal);
   }
 
+	/**
+	 * NewCell
+	 * I.S: <code>c</code>, <code>i</code>, dan <code>j</code> terdefenisi
+	 * F.S: <code>Cell</code> dialokasi berdasarkan <code>c</code>
+	 *
+	 * @param c tipe <code>Cell</code> yang akan dialokasi
+	 * @param i posisi <code>Cell</code> pada <code>width</code>
+	 * @param j posisi <Code>Cell</Code> pada <code>length</code>
+	 */
   private void NewCell(char c, int i, int j) {
     switch (c) {
       case 'W':
@@ -366,10 +396,10 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief Constructor
-   * \details Mengenerate kebun binatang dari file eksternal denangan list hewan kosong
-   */
+	/**
+	 * Constructor tanpa parameter
+	 * Mengenerate kebun binatang dari file eksternal
+	 */
   public Zoo() {
     width = 33;
     length = 32;
@@ -442,12 +472,13 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief Constructor
-   * \details Mengenerate kebun binatang dengan input dari user
-   * \param w width lebar kebun binatang
-   * \param l length panjang kebun binatang
-   */
+	/**
+	 * Constructor dengan parameter
+	 * Mengenerate kebun binatang dengan input dari user
+	 *
+	 * @param _width lebar kebun binatang
+	 * @param _length panjang kebun binatang
+	 */
   public Zoo(int _width, int _length) {
     width = _width;
     length = _length;
@@ -462,6 +493,7 @@ public class Zoo {
       }
     }
     CageInit();
+	  animals = new ArrayList<Animal>();
     char option;
     do {
       System.out.println("Ingin menambah hewan lagi? (y/n)");
@@ -473,6 +505,7 @@ public class Zoo {
         int py;
         float weight = 0;
         System.out.print("Input id hewan: ");
+	      id.append(scanner.nextLine());
         id.append(scanner.nextLine());
         System.out.print("Input posisi x: (kolom ke-)");
         px = scanner.nextInt();
@@ -491,10 +524,12 @@ public class Zoo {
       }
     } while (option == 'Y' || option == 'y');
   }
-  /**
-   * \brief Display
-   * \details Menampilkan kebun binatang ke layar
-   */
+
+	/**
+	 * Display
+	 * I.S: <code>cells</code> terdefenisi
+	 * F.S: <code>cells</code> tercetak di layar
+	 */
   public void Display(int x1, int y1, int x2, int y2) {
     for (int i = x1; i <= x2; ++i) {
       for (int j = y1; j <= y2; ++j) {
@@ -504,13 +539,13 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief FindAnimal
-   * \details Mengembalikan iterator hewan yang berada di pos
-   * <p>
-   * \param pos posisi Animal saat itu
-   * \return int untuk indeks arraylist animals
-   */
+	/**
+	 * FindAnimal
+	 * Mengembalikan iterator hewan yang berada di pos
+	 *
+	 * @param pos posisi Animal yang akan dicari di list
+	 * @return int untuk indeks arraylist animals
+	 */
   public int FindAnimal(Pair pos) {
     int i = 0;
     while (i < animals.size()) {
@@ -523,11 +558,13 @@ public class Zoo {
     return i;
   }
 
-  /**
-   * \brief AddAnimal
-   * \details Menambahkan hewan pada kebun binatang
-   * \param animals hewan yang akan ditambahkan
-   */
+	/**
+	 * AddAnimal
+	 * I.S: animal terdefenisi
+	 * F.S: animal ditambahkan ke kebun binatang jika memenuhi syarat
+	 *
+	 * @param animal hewan yang akan ditambahkan
+	 */
   public void AddAnimal(Animal animal) {
     int posx = animal.GetPos().first;
     int posy = animal.GetPos().second;
@@ -567,31 +604,36 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief DelAnimal dengan id
-   * \details Menghapus hewan dengan id=_id dan number=_number
-   * \param _id id jenis hewan
-   * \param _number nomor pada jenis hewan tersebut
-   */
+	/**
+	 * DelAnimal dengan id
+	 * I.S: sembarang
+	 * F.S: <code>Animal</code> dengan id=_id dan number=_number dihapus jika ada
+	 *
+	 * @param _id id jenis hewan
+	 * @param _number nomor pada jenis hewan tersebut
+	 */
   public void DelAnimal(String _id, int _number) {
     int i = 0;
     while (animals.get(i).GetId().equals(_id) && animals.get(i).GetNumber() != _number && i < animals.size() - 1) {
       ++i;
     }
-    if (animals.get(i).GetId() == _id && animals.get(i).GetNumber() == _number) {
-      animals.remove(i);
-    }
+	  if (animals.get(i).GetId().equals(_id) && animals.get(i).GetNumber() == _number) {
+		  animals.remove(i);
+	  }
     int posx = animals.get(i).GetPos().first;
     int posy = animals.get(i).GetPos().second;
     cells[posx][posy].SetSymbol(cells[posx][posy].GetInitSymbol());
   }
 
-  /**
-   * \brief DelAnimal
-   * \details Menghapus hewan pada posisi x y
-   * \param x posisi pada width
-   * \param y posisi pada length
-   */
+
+	/**
+	 * DelAnimal dengan posisi
+	 * I.S: sembarang
+	 * F.S: <code>Animal</code> pada posisi x y
+	 *
+	 * @param x posisi pada width
+	 * @param y posisi pada length
+	 */
   public void DelAnimal(int x, int y) {
     Pair pos;
     pos = new Pair(x, y);
@@ -601,11 +643,12 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief GetTotalMeat
-   * \details mengeluarkan total daging yang diperlukan di zoo dalam kilogram
-   * \return Total daging yang dibutuhkan zoo
-   */
+	/**
+	 * GetTotalMeat
+	 * Mengeluarkan total daging yang diperlukan di <code>Zoo</code> dalam kilogram
+	 *
+	 * @return float Total daging yang dibutuhkan <code>Zoo</code>
+	 */
   public float GetTotalMeat() {
     float sum = 0;
     for (int i = 0; i < animals.size(); i++) {
@@ -618,11 +661,12 @@ public class Zoo {
     return sum;
   }
 
-  /**
-   * \brief GetTotalVegetables
-   * \details mengeluarkan total sayur yang diperlukan di zoo dalam kilogram
-   * \return Total sayur yang dibutuhkan zoo
-   */
+	/**
+	 * GetTotalVegetables
+	 * Mengeluarkan total sayur yang diperlukan di <code>Zoo</code> dalam kilogram
+	 *
+	 * @return float Total sayur yang dibutuhkan <code>Zoo</code>
+	 */
   public float GetTotalVegetables() {
     float sum = 0;
     for (int i = 0; i < animals.size(); i++) {
@@ -635,12 +679,15 @@ public class Zoo {
     return sum;
   }
 
-  /**
-   * \brief MoveAnimal dengan posisi
-   * \details Menggerakkan animals dengan id=_id dan number=_number
-   * \param pos posisi hewan
-   * \param direction 0 untuk ke atas, 1 untuk ke kiri, 2 untuk ke kanan, 3 untuk ke bawah
-   */
+	/**
+	 * MoveAnimal dengan posisi
+	 * I.S: <code>cells</code> dan <code>cage_map</code> terdefenisi
+	 * F.S: <code>Animals</code> dengan <code>id</code>=<code>_id</code> dan
+	 *      <code>number</code>=<code>_number</code> digerakkan ke arah <code>direction</code> jika ada
+	 *
+	 * @param pos posisi hewan
+	 * @param direction 0 untuk ke atas, 1 untuk ke kiri, 2 untuk ke kanan, 3 untuk ke bawah
+	 */
   public void MoveAnimal(Pair pos, int direction) {
     int idx = FindAnimal(pos);
     if (idx != animals.size()) {
@@ -688,27 +735,32 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief MoveAnimal dengan id
-   * \details Menggerakkan animals dengan id=_id dan number=_number ke arah sesuai direction sebanyak 1 langkah jika memungkinkan (tidak melewati sekat)
-   * \param _id jenis hewan
-   * \param _number no number pada jenis hewan
-   * \param direction 0 untuk ke atas, 1 untuk ke kiri, 2 untuk ke kanan, 3 untuk ke bawah
-   */
+	/**
+	 * MoveAnimal dengan id
+	 * I.S: <code>cells</code> dan <code>cage_map</code> terdefenisi
+	 * F.S: <code>Animal</code> dengan <code>id</code>=<code>_id</code> dan <code>number</code>=<code>_number</code>
+	 *      digerakkan ke arah sesuai <code>direction</code> sebanyak 1 langkah jika memungkinkan (tidak melewati
+	 *      <code>sekat</code>)
+	 *
+	 * @param _id jenis hewan
+	 * @param _number no number pada jenis hewan
+	 * @param direction 0 untuk ke atas, 1 untuk ke kiri, 2 untuk ke kanan, 3 untuk ke bawah
+	 */
   public void MoveAnimal(String _id, int _number, int direction) {
     int i = 0;
-    while (animals.get(i).GetId() != _id && animals.get(i).GetNumber() != _number && i < animals.size() - 1) {
-      ++i;
-    }
-    if (animals.get(i).GetId() == _id && animals.get(i).GetNumber() == _number) {
-      MoveAnimal(animals.get(i).GetPos(), direction);
-    }
+	  while (!animals.get(i).GetId().equals(_id) && animals.get(i).GetNumber() != _number && i < animals.size() - 1) {
+		  ++i;
+	  }
+	  if (animals.get(i).GetId().equals(_id) && animals.get(i).GetNumber() == _number) {
+		  MoveAnimal(animals.get(i).GetPos(), direction);
+	  }
   }
 
-  /**
-   * \brief MoveAllAnimal
-   * \details Menggerakkan semua hewan secara acak
-   */
+	/**
+	 * MoveAllAnimal
+	 * I.S: <code>cells</code> dan <code>cage_map</code> terdefenisi
+	 * F.S: Semua hewan bergerak secara acak jika memungkinkan
+	 */
   public void MoveAllAnimal() {
     Random random = new Random();
     for (int i = 0; i < animals.size(); i++) {
@@ -716,13 +768,16 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief ToggleSekat
-   * \details Membuka/menutup sekat pada posisi i,j ke arah direction jika memungkinkan (tidak membuka ke luar cage)
-   * \param i posisi pada width
-   * \param j posisi pada length
-   * \param direction 0 untuk ke atas, 1 untuk ke kiri, 2 untuk ke kanan, 3 untuk ke bawah
-   */
+	/**
+	 * ToggleSekat
+	 * I.S: <code>cells</code> dan <code>cage_map</code> terdefenisi
+	 * F.S: <code>Sekat</code> pada posisi i,j ke arah direction dibuka/ditutup jika memungkinkan (tidak membuka ke luar
+	 *      cage)
+	 *
+	 * @param i posisi pada width
+	 * @param j posisi pada length
+	 * @param direction 0 untuk ke atas, 1 untuk ke kiri, 2 untuk ke kanan, 3 untuk ke bawah
+	 */
   public void ToggleSekat(int i, int j, int direction) {
     if (i >= 0 && i < width && j >= 0 && j < length) {
       char c = cells[i][j].GetInitSymbol();
@@ -765,10 +820,11 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief ToggleAllSekat
-   * \details Membuka/menutup semua sekat
-   */
+	/**
+	 * ToggleAllSekat
+	 * I.S: <code>cells</code> terdefenisi
+	 * F.S: Semua <Code>Sekat</Code> terbuka/tertutup jika memungkinkan
+	 */
   public void ToggleAllSekat() {
     for (int i = 0; i < width; ++i) {
       for (int j = 0; j < length; ++j) {
@@ -779,11 +835,14 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief Melakukan tour pada kebun binatang
-   * \details Jalur tour akan dipilih secara acak
-   * \details Settiap cell yang ada di samping road yang dilalui akan diinteract. Suatu cell adalah bagian dari suatu cage, maka semua binatang pada cage tersebut akan diinteract
-   */
+	/**
+	 * Tour
+	 * I.S: <code>cage_map</code> terdefenisi
+	 * F.S: Melakukan tour pada kebun binatang
+	 * Jalur tour akan dipilih secara acak
+	 * Settiap <code>Cell</code> yang ada di samping road yang dilalui akan diinteract.
+	 * Suatu <code>Cell</code> adalah bagian dari suatu cage, maka semua binatang pada cage tersebut akan diinteract
+	 */
   public void Tour() {
     Set<Pair> entrance;
     entrance = new HashSet<Pair>();
@@ -939,12 +998,15 @@ public class Zoo {
     }
   }
 
-  /**
-   * \brief InteractCage
-   * \details Melakukan interaksi dengan semua hewan yang ada di cage yang sama. Cage memiliki posisi pos dan nomor cage_number
-   * \param pos posisi cage
-   * \param cage_number nomor cage
-   */
+	/**
+	 * InteractCage
+	 * I.S: <code>cage_map</code> terdefenisi
+	 * F.S: Melakukan interaksi dengan semua hewan yang ada di cage yang sama. Cage memiliki posisi
+	 *      <code>pos</code> dan nomor <code>cage_number</code>
+	 *
+	 * @param pos posisi cage
+	 * @param cage_number nomor cage
+	 */
   public void InteractCage(Pair pos, int cage_number) {
     boolean Vis[][];
     Vis = new boolean[width][length];
