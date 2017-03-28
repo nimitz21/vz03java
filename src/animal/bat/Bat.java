@@ -6,15 +6,8 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Bat extends Animal {
-    public Bat(String _id,
-               int _number,
-               char _legend,
-               double _weight,
-               double _eat,
-               char _type,
-               Pair _position) {
-        super("BT", ++bat_nb,'*', _weight, food, 'O', _position);
-        eat = food;
+    public Bat(double _weight, Pair _position) {
+        super("BT", ++bat_nb,'*', _weight, 0.4, '0', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
         compatible.add(new String("CKT"));
@@ -24,15 +17,8 @@ public class Bat extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
-    public Bat(String _id,
-               int _number,
-               char _legend,
-               double _eat,
-               char _type,
-               Pair _position) {
-        super(_id,_number,_legend,_eat,_type,_position);
-        super("BT", ++bat_nb,'*', 0.15, food, 'O', _position);
-        eat = food;
+    public Bat(Pair _position) {
+        super("BT", ++bat_nb,'*', 0.15, 0.4, 'O', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
         compatible.add(new String("CKT"));
@@ -55,5 +41,4 @@ public class Bat extends Animal {
         Act();
     }
     private static int bat_nb;
-    private final double food = 0.4;
 }

@@ -7,28 +7,15 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Eagle extends Animal {
-    public Eagle(String _id,
-                 int _number,
-                 char _legend,
-                 double _weight,
-                 double _eat,
-                 char _type,
-                 Pair _position) {
-        super("EGL", ++eagle_nb,'#', _weight, food, 'K', _position);
-        eat = food;
+    public Eagle(double _weight, Pair _position) {
+        super("EGL", ++eagle_nb,'#', _weight, 0.4, 'K', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("EGL"));
         compatible.add(new String("OW"));
         compatible.add(new String("PLC"));
     }
-    public Eagle(String _id,
-                 int _number,
-                 char _legend,
-                 double _eat,
-                 char _type,
-                 Pair _position) {
-        super("EGL", ++eagle_nb,'#', 4, food, 'K', _position);
-        eat = food;
+    public Eagle(Pair _position) {
+        super("EGL", ++eagle_nb,'#', 4, 0.4, 'K', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("EGL"));
         compatible.add(new String("OW"));
@@ -47,5 +34,4 @@ public class Eagle extends Animal {
         Act();
     }
     private static int eagle_nb;
-    private final double food = 0.4;
 }

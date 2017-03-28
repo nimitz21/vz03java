@@ -7,15 +7,8 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Cockatoo extends Animal {
-    public Cockatoo(String _id,
-                    int _number,
-                    char _legend,
-                    double _weight,
-                    double _eat,
-                    char _type,
-                    Pair _position) {
-        super("CKT", ++cockatoo_nb,'^', _weight, food, 'H', _position);
-        eat = food;
+    public Cockatoo(double _weight, Pair _position) {
+        super("CKT", ++cockatoo_nb,'^', _weight, 0.4,'H', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
         compatible.add(new String("CKT"));
@@ -26,14 +19,8 @@ public class Cockatoo extends Animal {
         compatible.add(new String("CRN"));
         compatible.add(new String("CLG"));
     }
-    public Cockatoo(String _id,
-                    int _number,
-                    char _legend,
-                    double _eat,
-                    char _type,
-                    Pair _position) {
-        super("CKT", ++cockatoo_nb,'^', 0.09, food, 'H', _position);
-        eat = food;
+    public Cockatoo(Pair _position) {
+        super("CKT", ++cockatoo_nb,'^', 0.09, 0.4, 'H', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
         compatible.add(new String("CKT"));
@@ -57,6 +44,5 @@ public class Cockatoo extends Animal {
         Act();
     }
     private static int cockatoo_nb;
-    private final double food = 0.4;
 }
 

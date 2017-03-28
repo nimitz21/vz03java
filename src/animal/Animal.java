@@ -6,6 +6,16 @@ import java.util.HashSet;
  * Created by ASUS INDONESIA on 3/28/2017.
  */
 public abstract class Animal {
+	protected String id;
+	protected int number;
+	protected char legend;
+	protected double weight;
+	protected double eat;
+	protected char type;
+	protected Pair position;
+	protected HashSet<String> compatible;
+	protected HashSet<Character> habitat;
+
   public Animal(String _id,
                 int _number,
                 char _legend,
@@ -75,29 +85,19 @@ public abstract class Animal {
       System.out.println();
   }
   public void Move(int direction) {
-    switch(direction){
-      case 0:
-        (position.first)--;
-        break;
-      case 1:
-        (position.second)--;
-        break;
-      case 2:
-        (position.second)++;
-        break;
-      case 3:
-        (position.first)++;
-        break;
-    }
+	  switch (direction) {
+		  case 0:
+			  (position.first)--;
+			  break;
+		  case 1:
+			  (position.second)--;
+			  break;
+		  case 2:
+			  (position.second)++;
+			  break;
+		  case 3:
+			  (position.first)++;
+			  break;
+	  }
   }
-
-  protected String id;
-  protected int number;
-  protected char legend;
-  protected double weight;
-  protected double eat;
-  protected char type;
-  protected Pair position;
-  protected HashSet<String> compatible;
-  protected HashSet<Character> habitat;
 }
