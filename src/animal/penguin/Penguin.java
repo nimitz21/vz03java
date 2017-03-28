@@ -7,7 +7,7 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Penguin extends Animal {
-    public Penguin(Pair _posistion) {
+    public Penguin(Pair _position) {
 
     }
     public Penguin(double _weight, Pair _position) {

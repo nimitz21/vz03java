@@ -7,15 +7,8 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Dolphin extends Animal {
-    public Dolphin(String _id,
-                   int _number,
-                   char _legend,
-                   double _weight,
-                   double _eat,
-                   char _type,
-                   Pair _position) {
-        super("DLP", ++dolphin_nb,'!', _weight, food, 'K', _position);
-        eat = food;
+    public Dolphin(double _weight, Pair _position) {
+        super("DLP", ++dolphin_nb,'!', _weight, 0.4, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));
@@ -28,14 +21,8 @@ public class Dolphin extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
-    public Dolphin(String _id,
-                   int _number,
-                   char _legend,
-                   double _eat,
-                   char _type,
-                   Pair _position) {
-        super("DLP", ++dolphin_nb,'!', 226, food, 'K', _position);
-        eat = food;
+    public Dolphin(Pair _position) {
+        super("DLP", ++dolphin_nb,'!', 226, 0.4, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));
@@ -61,5 +48,4 @@ public class Dolphin extends Animal {
         Act();
     }
     private static int dolphin_nb;
-    private final double food = 0.4;
 }

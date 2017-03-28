@@ -7,7 +7,7 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Robin extends Animal {
-    public Robin(Pair _posistion) {
+    public Robin(Pair _position) {
 
     }
     public Robin(double _weight, Pair _position) {

@@ -7,7 +7,7 @@ import pair.Pair;
  */
 public class Bat extends Animal {
     public Bat(double _weight, Pair _position) {
-        super("BT", ++bat_nb,'*', _weight, 0.4, '0', _position);
+        super("BT", ++bat_nb,'*', _weight, 0.4, 'O', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
         compatible.add(new String("CKT"));

@@ -7,7 +7,7 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Owl extends Animal {
-    public Owl(Pair _posistion) {
+    public Owl(Pair _position) {
         
     }
     public Owl(double _weight, Pair _position) {

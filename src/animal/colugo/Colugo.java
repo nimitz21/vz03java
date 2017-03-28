@@ -7,15 +7,8 @@ import pair.Pair;
  * Created by asuspc on 3/28/2017.
  */
 public class Colugo extends Animal {
-    public Colugo(String _id,
-                  int _number,
-                  char _legend,
-                  double _weight,
-                  double _eat,
-                  char _type,
-                  Pair _position) {
-        super("CLG", ++colugo_nb,'<', _weight, food, 'H', _position);
-        eat = food;
+    public Colugo(double _weight, Pair _position) {
+        super("CLG", ++colugo_nb,'<', _weight, 0.4, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
         compatible.add(new String("ZBR"));
@@ -32,14 +25,8 @@ public class Colugo extends Animal {
         compatible.add(new String("GSE"));
         compatible.add(new String("CRN"));
     }
-    public Colugo(String _id,
-                  int _number,
-                  char _legend,
-                  double _eat,
-                  char _type,
-                  Pair _position) {
-        super("CLG", ++colugo_nb,'<', 0.035, food, 'H', _position);
-        eat = food;
+    public Colugo(Pair _position) {
+        super("CLG", ++colugo_nb,'<', 0.035, 0.4, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
         compatible.add(new String("ZBR"));
@@ -69,5 +56,4 @@ public class Colugo extends Animal {
         Act();
     }
     private static int colugo_nb;
-    private final double food = 0.4;
 }
