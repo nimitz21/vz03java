@@ -40,7 +40,7 @@ public class Habitat extends Cell {
   /**
    * Memasang atau menghilangkan sekat antar-<code>Cell</code>;
    * I.S.: sembarang.
-   * F.S.: sama dengan keadaan semula.
+   * F.S.: sekat terbuka/tertutup tergantung kondisi awal.
    *
    * @param direction arah yang ingin dibuka
    */
