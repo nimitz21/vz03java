@@ -1,4 +1,4 @@
-package animal.Cockatoo;
+package animal.cockatoo;
 
 import animal.Animal;
 import pair.Pair;

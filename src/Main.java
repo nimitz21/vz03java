@@ -1,7 +1,7 @@
 import driver.Driver;
 
 /**
- * Created by ASUS INDONESIA on 3/28/2017.
+ * @author Andika Kusuma
  */
 public class Main {
 

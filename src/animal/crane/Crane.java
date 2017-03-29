@@ -1,4 +1,4 @@
-package animal.Crane;
+package animal.crane;
 
 import animal.Animal;
 import pair.Pair;
@@ -24,7 +24,7 @@ public class Crane extends Animal {
 	 * @param _position posisi burung bangau yang diinginkan
 	 */
 	public Crane(double _weight, Pair _position) {
-		super("OW", ++crane_nb,'$', _weight, 0.3, 'K', _position);
+		super("CRN", ++crane_nb,'$', _weight, 0.3, 'K', _position);
 		habitat.add(new Character('W'));
 		habitat.add(new Character('A'));
 		compatible.add(new String("MRE"));
@@ -52,7 +52,7 @@ public class Crane extends Animal {
 	 * @param _position posisi burung bangau yang diinginkan
 	 */
 	public Crane(Pair _position) {
-		super("OW", ++crane_nb,'$', 2, 0.3, 'K', _position);
+		super("CRN", ++crane_nb,'$', 2, 0.3, 'K', _position);
 		habitat.add(new Character('W'));
 		habitat.add(new Character('A'));
 		compatible.add(new String("MRE"));
