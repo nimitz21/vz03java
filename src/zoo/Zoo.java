@@ -41,7 +41,7 @@ import java.util.*;
 /**
  * Kelas yang berisi kebun binatang itu sendiri beserta hewan-hewannya.
  *
- * @author Andika Kusuma & Reinaldo Ignatius Wijaya
+ * @author Andika Kusuma, Reinaldo Ignatius Wijaya
  * @version %I%, %G%
  */
 public class Zoo {

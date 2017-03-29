@@ -87,7 +87,7 @@ public class Pelican extends Animal {
       System.out.print("0");
     }
     System.out.print(number + ": ");
-    System.out.println("“hrraa-hrraa”");
+    System.out.println("hrraa-hrraa");
   }
 
   /**
