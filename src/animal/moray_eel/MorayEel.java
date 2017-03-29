@@ -21,7 +21,7 @@ public class MorayEel extends Animal {
      * @param _position posisi MorayEel yang diinginkan
      */
     public MorayEel(Pair _position) {
-        super("MRE", ++moray_eel_nb,'8', 13, 0.4, 'K', _position);
+        super("MRE", ++moray_eel_nb,'8', 13, 0.2, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));
@@ -38,7 +38,7 @@ public class MorayEel extends Animal {
      * @param _position posisi MorayEel yang diinginkan
      */
     public MorayEel(double _weight, Pair _position) {
-        super("MRE", ++moray_eel_nb,'8', _weight, 0.4, 'K', _position);
+        super("MRE", ++moray_eel_nb,'8', _weight, 0.2, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));

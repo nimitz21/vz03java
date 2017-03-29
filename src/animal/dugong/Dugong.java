@@ -20,7 +20,7 @@ public class Dugong extends Animal {
      * @param _position posisi Dugong yang diinginkan
      */
     public Dugong(double _weight, Pair _position) {
-        super("DGG", ++dugong_nb,'9', _weight, 0.4, 'H', _position);
+        super("DGG", ++dugong_nb,'9', _weight, 0.7, 'H', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));
@@ -39,7 +39,7 @@ public class Dugong extends Animal {
      * @param _position posisi Dugong yang diinginkan
      */
     public Dugong(Pair _position) {
-        super("DGG", ++dugong_nb,'9', 294, 0.4, 'K', _position);
+        super("DGG", ++dugong_nb,'9', 294, 0.7, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));

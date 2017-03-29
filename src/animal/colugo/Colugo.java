@@ -23,7 +23,7 @@ public class Colugo extends Animal {
      * @param _position posisi colugo yang diinginkan
      */
     public Colugo(double _weight, Pair _position) {
-        super("CLG", ++colugo_nb,'<', _weight, 0.4, 'H', _position);
+        super("CLG", ++colugo_nb,'<', _weight, 0.25, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
         compatible.add(new String("ZBR"));
@@ -46,7 +46,7 @@ public class Colugo extends Animal {
      * @param _position posisi colugo yang diinginkan
      */
     public Colugo(Pair _position) {
-        super("CLG", ++colugo_nb,'<', 0.035, 0.4, 'H', _position);
+        super("CLG", ++colugo_nb,'<', 0.035, 0.25, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
         compatible.add(new String("ZBR"));

@@ -23,7 +23,7 @@ public class Dolphin extends Animal {
      * @param _position posisi dolphin yang diinginkan
      */
     public Dolphin(double _weight, Pair _position) {
-        super("DLP", ++dolphin_nb,'!', _weight, 0.4, 'K', _position);
+        super("DLP", ++dolphin_nb,'!', _weight, 0.2, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));
@@ -42,7 +42,7 @@ public class Dolphin extends Animal {
      * @param _position posisi dolphin yang diinginkan
      */
     public Dolphin(Pair _position) {
-        super("DLP", ++dolphin_nb,'!', 226, 0.4, 'K', _position);
+        super("DLP", ++dolphin_nb,'!', 226, 0.2, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
         compatible.add(new String("DGG"));

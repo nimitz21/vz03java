@@ -23,7 +23,7 @@ public class Hog extends Animal {
      * @param _position posisi Hog yang diinginkan
      */
     public Hog(double _weight, Pair _position) {
-        super("HG", ++hog_nb,'6', _weight, 0.4, 'O', _position);
+        super("HG", ++hog_nb,'6', _weight, 0.2, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
         compatible.add(new String("ELP"));
@@ -37,7 +37,7 @@ public class Hog extends Animal {
      * @param _position posisi Hog yang diinginkan
      */
     public Hog(Pair _position) {
-        super("HG", ++hog_nb,'6', 68, 0.4, 'O', _position);
+        super("HG", ++hog_nb,'6', 68, 0.2, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
         compatible.add(new String("ELP"));

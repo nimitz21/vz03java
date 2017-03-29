@@ -25,7 +25,7 @@ public class Elephant extends Animal {
      * @param _position posisi Elephant yang diinginkan
      */
     public Elephant(double _weight, Pair _position) {
-        super("ELP", ++elephant_nb,'4', _weight, 0.4, 'H', _position);
+        super("ELP", ++elephant_nb,'4', _weight, 0.7, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
         compatible.add(new String("ZBR"));
@@ -41,7 +41,7 @@ public class Elephant extends Animal {
      * @param _position posisi Elephant yang diinginkan
      */
     public Elephant(Pair _position) {
-        super("ELP", ++elephant_nb,'4', 5000, 0.4, 'H', _position);
+        super("ELP", ++elephant_nb,'4', 5000, 0.7, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
         compatible.add(new String("ZBR"));

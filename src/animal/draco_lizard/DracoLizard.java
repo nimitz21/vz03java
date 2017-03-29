@@ -23,7 +23,7 @@ public class DracoLizard extends Animal {
      * @param _position posisi DracoLizard yang diinginkan
      */
     public DracoLizard(double _weight, Pair _position) {
-        super("DRL", ++draco_lizard_nb,'=', _weight, 0.4, 'K', _position);
+        super("DRL", ++draco_lizard_nb,'=', _weight, 0.2, 'K', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
         compatible.add(new String("ZBR"));
@@ -44,7 +44,7 @@ public class DracoLizard extends Animal {
      * @param _position posisi DracoLizard yang diinginkan
      */
     public DracoLizard(Pair _position) {
-        super("DRL", ++draco_lizard_nb,'=', 0.2, 0.4, 'K', _position);
+        super("DRL", ++draco_lizard_nb,'=', 0.2, 0.2, 'K', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
         compatible.add(new String("ZBR"));

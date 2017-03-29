@@ -21,7 +21,7 @@ public class Lion extends Animal {
      * @param _position posisi Lion yang diinginkan
      */
     public Lion(Pair _position) {
-        super("LI", ++lion_nb, '2', 158, 0.4, 'O', _position);
+        super("LI", ++lion_nb, '2', 158, 0.5, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("LI"));
     }
@@ -33,7 +33,7 @@ public class Lion extends Animal {
      * @param _position posisi Lion yang diinginkan
      */
     public Lion(double _weight, Pair _position) {
-        super("LI", ++lion_nb, '2', _weight, 0.4, 'O', _position);
+        super("LI", ++lion_nb, '2', _weight, 0.5, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("LI"));
     }

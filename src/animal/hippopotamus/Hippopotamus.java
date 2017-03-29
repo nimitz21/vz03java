@@ -23,7 +23,7 @@ public class Hippopotamus extends Animal {
      * @param _position posisi Hippopotamus yang diinginkan
      */
     public Hippopotamus(double _weight, Pair _position) {
-        super("HPP", ++hippopotamus_nb,')', _weight, 0.4, 'H', _position);
+        super("HPP", ++hippopotamus_nb,')', _weight, 0.65, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('W'));
         compatible.add(new String("WF"));
@@ -49,7 +49,7 @@ public class Hippopotamus extends Animal {
      * @param _position posisi Hippopotamus yang diinginkan
      */
     public Hippopotamus(Pair _position) {
-        super("HPP", ++hippopotamus_nb,')', 1496, 0.4, 'H', _position);
+        super("HPP", ++hippopotamus_nb,')', 1496, 0.65, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('W'));
         compatible.add(new String("WF"));

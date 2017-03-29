@@ -24,7 +24,7 @@ public class Goose extends Animal {
      * @param _position posisi Goose yang diinginkan
      */
     public Goose(double _weight, Pair _position) {
-        super("GSE", ++goose_nb,'+', _weight, 0.4, 'H', _position);
+        super("GSE", ++goose_nb,'+', _weight, 0.3, 'H', _position);
         habitat.add(new Character('W'));
         habitat.add(new Character('A'));
         compatible.add(new String("MRE"));
@@ -50,7 +50,7 @@ public class Goose extends Animal {
      * @param _position posisi Goose yang diinginkan
      */
     public Goose(Pair _position) {
-        super("GSE", ++goose_nb,'+', 4, 0.4, 'H', _position);
+        super("GSE", ++goose_nb,'+', 4, 0.3, 'H', _position);
         habitat.add(new Character('W'));
         habitat.add(new Character('A'));
         compatible.add(new String("MRE"));

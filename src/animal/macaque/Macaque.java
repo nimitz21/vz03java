@@ -25,7 +25,7 @@ public class Macaque extends Animal {
          * Konstruktor untuk menciptakan <code>Macaque</code> pada posisi tertentu.
          *
          * @param _position posisi Macaque yang diinginkan
-         */super("MCQ", ++macaque_nb,'5', 9, 0.4, 'O', _position);
+         */super("MCQ", ++macaque_nb,'5', 9, 0.2, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
         compatible.add(new String("ELP"));
@@ -44,7 +44,7 @@ public class Macaque extends Animal {
      * @param _position posisi Macaque yang diinginkan
      */
     public Macaque(double _weight, Pair _position) {
-        super("MCQ", ++macaque_nb,'5', _weight, 0.4, 'O', _position);
+        super("MCQ", ++macaque_nb,'5', _weight, 0.2, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
         compatible.add(new String("ELP"));

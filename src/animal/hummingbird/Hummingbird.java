@@ -22,7 +22,7 @@ public class Hummingbird extends Animal {
      * @param _position posisi Hummingbird yang diinginkan
      */
     public Hummingbird(Pair _position) {
-        super("HMB", ++hummingbird_nb,'%', 0.0002, 0.4, 'H', _position);
+        super("HMB", ++hummingbird_nb,'%', 0.0002, 0.3, 'H', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
         compatible.add(new String("CKT"));
@@ -43,7 +43,7 @@ public class Hummingbird extends Animal {
      */
     
     public Hummingbird(double _weight, Pair _position) {
-        super("HMB", ++hummingbird_nb,'%', _weight, 0.4, 'H', _position);
+        super("HMB", ++hummingbird_nb,'%', _weight, 0.3, 'H', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
         compatible.add(new String("CKT"));
