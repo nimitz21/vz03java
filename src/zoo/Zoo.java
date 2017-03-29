@@ -39,39 +39,39 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
- * Kelas yang berisi kebun binatang itu sendiri beserta hewan-hewannya
+ * Kelas yang berisi kebun binatang itu sendiri beserta hewan-hewannya.
  *
- * @author Reinaldo Ignatius Wijaya
+ * @author Andika Kusuma & Reinaldo Ignatius Wijaya
  * @version %I%, %G%
  */
 public class Zoo {
     /**
-     * dimensi <code>Zoo</code>jumlah baris
+     * Dimensi <code>Zoo</code>jumlah baris.
      */
     private int width;
 
     /**
-     * dimensi <code>Zoo</code> jumlah kolom
+     * Dimensi <code>Zoo</code> jumlah kolom.
      */
     private int length;
 
     /**
-     * matriks <code>Cell</code> yang dimiliki <code>Zoo</code>
+     * Matriks <code>Cell</code> yang dimiliki <code>Zoo</code>.
      */
     private Cell[][] cells;
 
     /**
-     * daftar <code>Animal</code> yang ada dalam <code>Zoo</code>
+     * Daftar <code>Animal</code> yang ada dalam <code>Zoo</code>.
      */
     private ArrayList<Animal> animals;
 
     /**
-     * matriks penanda nomor cage dalam <code>Zoo</code>
+     * Matriks penanda nomor cage dalam <code>Zoo</code>.
      */
     private int[][] cage_map;
 
     /**
-     * jumlah cage yang ada dalam zoo
+     * Jumlah cage yang ada dalam zoo.
      */
     private int cage_nb; /**< jumlah cage yang ada dalam zoo*/
 
