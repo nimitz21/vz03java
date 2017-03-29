@@ -44,13 +44,13 @@ public abstract class Animal {
 	protected double eat;
 
 	/**
-	 * Jenis hewan berdasarkan makanan yang dikonsumsinya:
+	 * Jenis hewan berdasarkan makanan yang dikonsumsinya.
 	 * K untuk karnnivor, H untuk herbivor, O untuk omnivor).
 	 */
 	protected char type;
 
 	/**
-	 * Pasangan <code>integer</code> yang merepresentasikan
+	 * Pasangan <code>integer</code> yang merepresentasikan.
 	 * posisi dari hewan.
 	 */
 	protected Pair position;
@@ -219,20 +219,20 @@ public abstract class Animal {
 	 * F.S.: pada layar tercetak deskripsi mengenai hewan tersebut.
 	 */
   public final void Description(final String a) {
-      System.out.print("This is a(n) " + a + " called " + id + "-");
-      if (number < 10) {
-          System.out.print("0");
-      }
-      System.out.print(number + ". It weights " + weight + " kilograms. It eats ");
-      System.out.print((eat * weight) + " kilograms of ");
-      if (type == 'K') {
-          System.out.print("meats");
-      } else if (type == 'O') {
-          System.out.print("meats and vegetables");
-      } else {
-          System.out.print("vegetables");
-      }
-      System.out.println();
+    System.out.print("This is a(n) " + a + " called " + id + "-");
+    if (number < 10) {
+      System.out.print("0");
+    }
+    System.out.print(number + ". It weights " + weight + " kilograms. It eats ");
+    System.out.print((eat * weight) + " kilograms of ");
+    if (type == 'K') {
+      System.out.print("meats");
+    } else if (type == 'O') {
+      System.out.print("meats and vegetables");
+    } else {
+      System.out.print("vegetables");
+    }
+    System.out.println();
   }
 
 	/**
