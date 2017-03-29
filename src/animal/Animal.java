@@ -150,23 +150,74 @@ public abstract class Animal {
 	 * @return legend
 	 */
   public final char GetLegend() {
-        return legend;
-    }
+    return legend;
+  }
+
+	/**
+	 * Mengembalikan daftar habitat yang dapat
+	 * ditinggali hewan tersebut.
+	 *
+	 * @return habitat
+	 */
   public final HashSet<Character> GetHabitat() {
-        return habitat;
-    }
-  public void SetWeight(double _weight) {
-    weight = _weight;
+    return habitat;
   }
-  public void SetPos(Pair _position) {
-    position.first = _position.first;
-    position.second = _position.second;
-  }
+
+	/**
+	 * Mengembalikan daftar hewan yang aman diletakkan
+	 * pada kandang yang sama dengan hewan tersebut.
+	 *
+	 * @return compatible
+	 */
   public final HashSet<String> GetCompatible() {
-        return compatible;
-    }
+    return compatible;
+  }
+
+	/**
+	 * Mengubah berat badan hewan menjadi <code>_weight</code>.
+	 * I.S.: <code>weight</code> sembarang.
+	 * F.S.: <code>weight</code> telah terganti dengan <code>_weight</code>.
+	 *
+	 * @param _weight berat badan baru hewan
+	 */
+	public void SetWeight(double _weight) {
+		weight = _weight;
+	}
+
+	/**
+	 * Mengubah posisi hewan menjadi <code>_position</code>.
+	 * I.S.: <code>position</code> sembarang.
+	 * F.S.: <code>position</code> telah terganti dengan <code>_position</code>.
+	 *
+	 * @param _position berat badan baru hewan
+	 */
+	public void SetPos(Pair _position) {
+		position.first = _position.first;
+		position.second = _position.second;
+	}
+
+	/**
+	 * Mencetak kelakuan hewan tersebut ke layar.
+	 * I.S.: sembarang.
+	 * F.S.: pada layar tercetak apa yang dilakukan hewan.
+	 * Diimplementasi di kelas turunan
+	 */
   abstract public void Act();
+
+	/**
+	 * Mencetak deskripsi dan kelakuan hewan pada layar.
+	 * I.S.: sembarang.
+	 * F.S.: pada layar tercetak hasil interaksi
+	 * dengan hewan (deskripsi dan kelakuan).
+	 * Diimplementasi di kelas turunan
+	 */
   abstract public void Interact();
+
+	/**
+	 * Mencetak deskripsi hewan tersebut ke layar.
+	 * I.S.: sembarang.
+	 * F.S.: pada layar tercetak deskripsi mengenai hewan tersebut.
+	 */
   public final void Description(String a) {
       System.out.print("This is a(n) "+a+" called "+id+"-");
       if(number < 10) {
@@ -183,6 +234,14 @@ public abstract class Animal {
       }
       System.out.println();
   }
+
+	/**
+	 * Menggerakkan hewan dengan arah sesuai <code>direction</code>.
+	 * I.S.: <code>direction</code> haruslah merupakan arah yang dapat dikunjungi hewan.
+	 * F.S.: hewan telah bergerak sesuai <code>direction</code>.
+	 *
+	 * @param direction arah yang ingin dituju (0 ke atas, 1 ke kiri, 2 ke kanan, 3 ke bawah)
+	 */
   public void Move(int direction) {
 	  switch (direction) {
 		  case 0:
