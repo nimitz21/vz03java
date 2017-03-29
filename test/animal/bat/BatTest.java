@@ -14,11 +14,6 @@ public class BatTest extends TestCase {
 		assert(b.GetId().equals("BT"));
   }
 
-  public void testGetNumber() throws Exception {
-	  Bat b = new Bat(new Pair());
-	  assert(b.GetNumber() == 2);
-  }
-
   public void testGetWeight() throws Exception {
 	  Bat b = new Bat(new Pair());
 	  assert(b.GetWeight() == 0.15);
@@ -33,7 +28,7 @@ public class BatTest extends TestCase {
 
   public void testGetPos() throws Exception {
 	  Bat b = new Bat(new Pair());
-	  assert(b.GetPos().equals(new Pair()));
+	  assert(b.GetPos().Equals(new Pair()));
   }
 
   public void testGetType() throws Exception {
@@ -69,13 +64,13 @@ public class BatTest extends TestCase {
   public void testMove() throws Exception {
 	  Bat b = new Bat(new Pair());
 	  b.Move(0);
-	  assert(b.GetPos().equals(new Pair(-1, 0)));
+	  assert(b.GetPos().Equals(new Pair(-1, 0)));
 	  b.Move(1);
-	  assert(b.GetPos().equals(new Pair(-1, -1)));
+	  assert(b.GetPos().Equals(new Pair(-1, -1)));
 	  b.Move(2);
-	  assert(b.GetPos().equals(new Pair(-1, 0)));
+	  assert(b.GetPos().Equals(new Pair(-1, 0)));
 	  b.Move(3);
-	  assert(b.GetPos().equals(new Pair(0, 0)));
+	  assert(b.GetPos().Equals(new Pair(0, 0)));
   }
 
 }
