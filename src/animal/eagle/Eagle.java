@@ -22,7 +22,7 @@ public class Eagle extends Animal {
      * @param _weight berat Eagle yang diinginkan
      * @param _position posisi Eagle yang diinginkan
      */
-    public Eagle(double _weight, Pair _position) {
+    public Eagle(final double _weight, final Pair _position) {
         super("EGL", ++eagle_nb,'#', _weight, 0.4, 'K', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("EGL"));
@@ -34,7 +34,7 @@ public class Eagle extends Animal {
      *
      * @param _position posisi Eagle yang diinginkan
      */
-    public Eagle(Pair _position) {
+    public Eagle(final Pair _position) {
         super("EGL", ++eagle_nb,'#', 4, 0.4, 'K', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("EGL"));
@@ -47,11 +47,11 @@ public class Eagle extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Eagle.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*scream*");
     }
     /**

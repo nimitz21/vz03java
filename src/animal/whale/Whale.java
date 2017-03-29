@@ -23,7 +23,7 @@ public class Whale extends Animal {
      * @param _weight berat paus yang diinginkan
      * @param _position posisi paus yang diinginkan
      */
-    public Whale(double _weight, Pair _position) {
+    public Whale(final double _weight, final Pair _position) {
         super("WHL", ++whale_nb,'@', _weight, 0.3, 'O', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("WHL"));
@@ -44,7 +44,7 @@ public class Whale extends Animal {
      *
      * @param _position posisi paus yang diinginkan
      */
-    public Whale(Pair _position) {
+    public Whale(final Pair _position) {
         super("WHL", ++whale_nb,'@', 40000, 0.3, 'O', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("WHL"));
@@ -66,11 +66,11 @@ public class Whale extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan paus.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*sing*");
     }
 

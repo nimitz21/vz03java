@@ -23,7 +23,7 @@ public class Shark extends Animal {
      * @param _weight berat hiu yang diinginkan
      * @param _position posisi hiu yang diinginkan
      */
-    public Shark(double _weight, Pair _position) {
+    public Shark(final double _weight, final Pair _position) {
         super("SHK", ++shark_nb,'7', _weight, 0.5, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("SHK"));
@@ -35,7 +35,7 @@ public class Shark extends Animal {
      *
      * @param _position posisi hiu yang diinginkan
      */
-    public Shark(Pair _position) {
+    public Shark(final Pair _position) {
         super("SHK", ++shark_nb,'7', 771, 0.5, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("SHK"));
@@ -48,11 +48,11 @@ public class Shark extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan hiu.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*cruise*");
     }
     /**

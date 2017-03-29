@@ -22,7 +22,7 @@ public class Hippopotamus extends Animal {
      * @param _weight berat Hippopotamus yang diinginkan
      * @param _position posisi Hippopotamus yang diinginkan
      */
-    public Hippopotamus(double _weight, Pair _position) {
+    public Hippopotamus(final double _weight, final Pair _position) {
         super("HPP", ++hippopotamus_nb,')', _weight, 0.65, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('W'));
@@ -48,7 +48,7 @@ public class Hippopotamus extends Animal {
      *
      * @param _position posisi Hippopotamus yang diinginkan
      */
-    public Hippopotamus(Pair _position) {
+    public Hippopotamus(final Pair _position) {
         super("HPP", ++hippopotamus_nb,')', 1496, 0.65, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('W'));
@@ -75,11 +75,11 @@ public class Hippopotamus extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Hippopotamus.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*grunt*");
     }
     /**

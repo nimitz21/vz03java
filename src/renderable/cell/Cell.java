@@ -11,12 +11,12 @@ import renderable.Renderable;
  */
 public abstract class Cell implements Renderable {
   /**
-   * simbol asli untuk sel dengan jenis tertentu
+   * simbol asli untuk sel dengan jenis tertentu.
    */
   protected Character initial_symbol;
 
   /**
-   * simbol yang akan ditampilkan pada layar (dapat dioverwrite animal)
+   * simbol yang akan ditampilkan pada layar (dapat dioverwrite animal).
    */
   protected Character symbol;
 
@@ -35,7 +35,7 @@ public abstract class Cell implements Renderable {
    *
    * @param _initial_symbol simbol yang ingin dijadikan input.
    */
-  public Cell(char _initial_symbol) {
+  public Cell(final char _initial_symbol) {
     initial_symbol = new Character(_initial_symbol);
     symbol = new Character(_initial_symbol);
   }
@@ -45,7 +45,7 @@ public abstract class Cell implements Renderable {
    *
    * @return initial symbol.
    */
-  public Character GetInitSymbol() {
+  public final Character GetInitSymbol() {
     return initial_symbol;
   }
 
@@ -54,7 +54,7 @@ public abstract class Cell implements Renderable {
    *
    * @return symbol.
    */
-  public Character GetSymbol() {
+  public final Character GetSymbol() {
     return symbol;
   }
 
@@ -66,7 +66,7 @@ public abstract class Cell implements Renderable {
    *
    * @param s initial <code>symbol</code> yang baru.
    */
-  public void SetInitSymbol(Character s) {
+  public void SetInitSymbol(final Character s) {
     initial_symbol = s;
   }
 
@@ -78,7 +78,7 @@ public abstract class Cell implements Renderable {
    *
    * @param s <code>symbol</code> yang baru.
    */
-  public void SetSymbol(Character s) {
+  public void SetSymbol(final Character s) {
     symbol = s;
   }
 

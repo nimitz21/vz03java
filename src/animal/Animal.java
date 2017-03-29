@@ -68,16 +68,16 @@ public abstract class Animal {
 	protected HashSet<Character> habitat;
 
 	/**
-	 * Konstruktor
-	 * Menciptakan hewan
+	 * Konstruktor.
+	 * Menciptakan hewan.
 	 */
-  public Animal(String _id,
-                int _number,
-                char _legend,
-                double _weight,
-                double _eat,
-                char _type,
-                Pair _position) {
+  public Animal(final String _id,
+                final int _number,
+                final char _legend,
+                final double _weight,
+                final double _eat,
+                final char _type,
+                final Pair _position) {
     id = new String(_id.toString());
     number = _number;
     legend = _legend;
@@ -90,7 +90,7 @@ public abstract class Animal {
   }
 
 	/**
-	 * Mengembalikan identitas jenis hewan tersebut
+	 * Mengembalikan identitas jenis hewan tersebut.
 	 *
 	 * @return id
 	 */
@@ -180,7 +180,7 @@ public abstract class Animal {
 	 *
 	 * @param _weight berat badan baru hewan
 	 */
-	public void SetWeight(double _weight) {
+	public void SetWeight(final double _weight) {
 		weight = _weight;
 	}
 
@@ -191,7 +191,7 @@ public abstract class Animal {
 	 *
 	 * @param _position berat badan baru hewan
 	 */
-	public void SetPos(Pair _position) {
+	public void SetPos(final Pair _position) {
 		position.first = _position.first;
 		position.second = _position.second;
 	}
@@ -218,13 +218,13 @@ public abstract class Animal {
 	 * I.S.: sembarang.
 	 * F.S.: pada layar tercetak deskripsi mengenai hewan tersebut.
 	 */
-  public final void Description(String a) {
-      System.out.print("This is a(n) "+a+" called "+id+"-");
-      if(number < 10) {
+  public final void Description(final String a) {
+      System.out.print("This is a(n) " + a + " called " + id + "-");
+      if (number < 10) {
           System.out.print("0");
       }
-      System.out.print(number+". It weights "+weight+" kilograms. It eats ");
-      System.out.print((eat*weight)+" kilograms of ");
+      System.out.print(number + ". It weights " + weight + " kilograms. It eats ");
+      System.out.print((eat * weight) + " kilograms of ");
       if (type == 'K') {
           System.out.print("meats");
       } else if (type == 'O') {
@@ -242,7 +242,7 @@ public abstract class Animal {
 	 *
 	 * @param direction arah yang ingin dituju (0 ke atas, 1 ke kiri, 2 ke kanan, 3 ke bawah)
 	 */
-  public void Move(int direction) {
+  public void Move(final int direction) {
 	  switch (direction) {
 		  case 0:
 			  (position.first)--;

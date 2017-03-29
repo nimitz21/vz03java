@@ -22,8 +22,8 @@ public class Cockatoo extends Animal {
      * @param _weight berat cockatoo yang diinginkan
      * @param _position posisi cockatoo yang diinginkan
      */
-    public Cockatoo(double _weight, Pair _position) {
-        super("CKT", ++cockatoo_nb,'^', _weight, 0.3,'H', _position);
+    public Cockatoo(final double _weight, final Pair _position) {
+        super("CKT", ++cockatoo_nb,'^', _weight, 0.3, 'H', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
         compatible.add(new String("CKT"));
@@ -39,7 +39,7 @@ public class Cockatoo extends Animal {
      *
      * @param _position posisi Cockatoo yang diinginkan
      */
-    public Cockatoo(Pair _position) {
+    public Cockatoo(final Pair _position) {
         super("CKT", ++cockatoo_nb,'^', 0.09, 0.3, 'H', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
@@ -57,11 +57,11 @@ public class Cockatoo extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Cockatoo.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*talk*");
     }
     /**

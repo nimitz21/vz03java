@@ -14,7 +14,7 @@ public class Road extends Facility {
   /**
    * Konstruktor untuk menciptakan <code>Road</code>.
    */
-  public Road(char r) {
+  public Road(final char r) {
     initial_symbol = new Character(r);
     symbol = new Character(r);
   }
@@ -27,7 +27,7 @@ public class Road extends Facility {
    *
    * @param direction arah yang ingin dibuka
    */
-  public void ToggleSekat(int direction) {}
+  public void ToggleSekat(final int direction) { }
 
   /**
    * Mengecek apakah ke arah direction terdapat sekat;
@@ -36,7 +36,7 @@ public class Road extends Facility {
    * @param direction arah yang ingin dicek
    * @return false
    */
-  public boolean GetSekat(int direction) {
+  public final boolean GetSekat(final int direction) {
     return false;
   }
 
@@ -45,5 +45,5 @@ public class Road extends Facility {
    * I.S.: sembarang.
    * F.S.: sama dengan keadaan semula.
    */
-  public void Interact() {}
+  public final void Interact() { }
 }

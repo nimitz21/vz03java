@@ -15,7 +15,7 @@ public abstract class Facility extends Cell {
   /**
    * Konstruktor untuk menciptakan <code>Facility</code>.
    */
-  public Facility() {}
+  public Facility() { }
 
   /**
    * Interaksi dengan <code>Facility</code>; tidak diimplementasi pada class ini.

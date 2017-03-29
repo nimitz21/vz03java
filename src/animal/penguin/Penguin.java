@@ -23,7 +23,7 @@ public class Penguin extends Animal {
      * @param _weight berat penguin yang diinginkan
      * @param _position posisi penguin yang diinginkan
      */
-    public Penguin(double _weight, Pair _position) {
+    public Penguin(final double _weight, final Pair _position) {
         super("PNG", ++penguin_nb,'(', _weight, 0.3, 'K', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('W'));
@@ -48,7 +48,7 @@ public class Penguin extends Animal {
      *
      * @param _position posisi penguin yang diinginkan
      */
-    public Penguin(Pair _position) {
+    public Penguin(final Pair _position) {
         super("PNG", ++penguin_nb,'(', 22, 0.3, 'K', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('W'));
@@ -74,11 +74,11 @@ public class Penguin extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan penguin.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*slide*");
     }
     /**

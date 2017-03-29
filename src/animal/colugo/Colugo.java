@@ -22,7 +22,7 @@ public class Colugo extends Animal {
      * @param _weight berat colugo yang diinginkan
      * @param _position posisi colugo yang diinginkan
      */
-    public Colugo(double _weight, Pair _position) {
+    public Colugo(final double _weight, final Pair _position) {
         super("CLG", ++colugo_nb,'<', _weight, 0.25, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
@@ -45,7 +45,7 @@ public class Colugo extends Animal {
      *
      * @param _position posisi colugo yang diinginkan
      */
-    public Colugo(Pair _position) {
+    public Colugo(final Pair _position) {
         super("CLG", ++colugo_nb,'<', 0.035, 0.25, 'H', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
@@ -69,11 +69,11 @@ public class Colugo extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan colugo.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*glide*");
     }
     /**

@@ -23,7 +23,7 @@ public class SugarGlider extends Animal {
      * @param _weight berat sugar glider yang diinginkan
      * @param _position posisi sugar glider yang diinginkan
      */
-    public SugarGlider(double _weight, Pair _position) {
+    public SugarGlider(final double _weight, final Pair _position) {
         super("SGL", ++sugar_glider_nb,'>', _weight, 0.4, 'O', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
@@ -44,7 +44,7 @@ public class SugarGlider extends Animal {
      *
      * @param _position posisi sugar glider yang diinginkan
      */
-    public SugarGlider(Pair _position) {
+    public SugarGlider(final Pair _position) {
         super("SGL", ++sugar_glider_nb,'>', 0.12, 0.4, 'O', _position);
         habitat.add(new Character('L'));
         habitat.add(new Character('A'));
@@ -66,11 +66,11 @@ public class SugarGlider extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan sugar glider.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*crab*");
     }
 

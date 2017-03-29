@@ -23,7 +23,7 @@ public class Goose extends Animal {
      * @param _weight berat Goose yang diinginkan
      * @param _position posisi Goose yang diinginkan
      */
-    public Goose(double _weight, Pair _position) {
+    public Goose(final double _weight, final Pair _position) {
         super("GSE", ++goose_nb,'+', _weight, 0.3, 'H', _position);
         habitat.add(new Character('W'));
         habitat.add(new Character('A'));
@@ -49,7 +49,7 @@ public class Goose extends Animal {
      *
      * @param _position posisi Goose yang diinginkan
      */
-    public Goose(Pair _position) {
+    public Goose(final Pair _position) {
         super("GSE", ++goose_nb,'+', 4, 0.3, 'H', _position);
         habitat.add(new Character('W'));
         habitat.add(new Character('A'));
@@ -76,11 +76,11 @@ public class Goose extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Goose.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*quack*");
     }
     /**

@@ -23,7 +23,7 @@ public class Owl extends Animal {
      * @param _weight berat burung hantu yang diinginkan
      * @param _position posisi burung hantu yang diinginkan
      */
-    public Owl(double _weight, Pair _position) {
+    public Owl(final double _weight, final Pair _position) {
         super("OW", ++owl_nb,'$', _weight, 0.3, 'K', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("EGL"));
@@ -37,7 +37,7 @@ public class Owl extends Animal {
      *
      * @param _position posisi burung hantu yang diinginkan
      */
-    public Owl(Pair _position) {
+    public Owl(final Pair _position) {
         super("OW", ++owl_nb,'$', 2, 0.3, 'K', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("EGL"));
@@ -52,11 +52,11 @@ public class Owl extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan burung hantu.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*hoot*");
     }
 

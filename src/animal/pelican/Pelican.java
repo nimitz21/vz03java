@@ -23,7 +23,7 @@ public class Pelican extends Animal {
      * @param _weight berat burung pelikan yang diinginkan
      * @param _position posisi burung pelikan yang diinginkan
      */
-    public Pelican(double _weight, Pair _position) {
+    public Pelican(final double _weight, final Pair _position) {
         super("PLC", ++pelican_nb,'`', _weight, 0.3, 'K', _position);
         habitat.add(new Character('A'));
         habitat.add(new Character('W'));
@@ -52,7 +52,7 @@ public class Pelican extends Animal {
      *
      * @param _position posisi burung pelikan yang diinginkan
      */
-    public Pelican(Pair _position) {
+    public Pelican(final Pair _position) {
         super("PLC", ++pelican_nb,'`', 7, 0.3, 'K', _position);
         habitat.add(new Character('A'));
         habitat.add(new Character('W'));
@@ -82,11 +82,11 @@ public class Pelican extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan burung pelikan.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("“hrraa-hrraa”");
     }
 

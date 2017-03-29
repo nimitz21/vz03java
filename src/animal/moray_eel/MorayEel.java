@@ -20,7 +20,7 @@ public class MorayEel extends Animal {
      *
      * @param _position posisi MorayEel yang diinginkan
      */
-    public MorayEel(Pair _position) {
+    public MorayEel(final Pair _position) {
         super("MRE", ++moray_eel_nb,'8', 13, 0.2, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
@@ -37,7 +37,7 @@ public class MorayEel extends Animal {
      * @param _weight berat MorayEel yang diinginkan
      * @param _position posisi MorayEel yang diinginkan
      */
-    public MorayEel(double _weight, Pair _position) {
+    public MorayEel(final double _weight, final Pair _position) {
         super("MRE", ++moray_eel_nb,'8', _weight, 0.2, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
@@ -53,11 +53,11 @@ public class MorayEel extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan MorayEel.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*hide into rocks*");
     }
     /**

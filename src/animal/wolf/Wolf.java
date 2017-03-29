@@ -23,7 +23,7 @@ public class Wolf extends Animal {
      * @param _weight berat serigala yang diinginkan
      * @param _position posisi serigala yang diinginkan
      */
-    public Wolf(double _weight, Pair _position) {
+    public Wolf(final double _weight, final Pair _position) {
         super("WF", ++wolf_nb,'1', _weight, 0.2, 'K', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
@@ -36,7 +36,7 @@ public class Wolf extends Animal {
      *
      * @param _position posisi serigala yang diinginkan
      */
-    public Wolf(Pair _position) {
+    public Wolf(final Pair _position) {
         super("WF", ++wolf_nb,'1', 45, 0.2, 'K', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
@@ -50,11 +50,11 @@ public class Wolf extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan serigala.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*howl*");
     }
 

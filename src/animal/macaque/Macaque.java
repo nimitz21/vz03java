@@ -20,7 +20,7 @@ public class Macaque extends Animal {
      *
      * @param _position posisi Macaque yang diinginkan
      */
-    public Macaque(Pair _position) {
+    public Macaque(final Pair _position) {
         /**
          * Konstruktor untuk menciptakan <code>Macaque</code> pada posisi tertentu.
          *
@@ -43,7 +43,7 @@ public class Macaque extends Animal {
      * @param _weight berat Macaque yang diinginkan
      * @param _position posisi Macaque yang diinginkan
      */
-    public Macaque(double _weight, Pair _position) {
+    public Macaque(final double _weight, final Pair _position) {
         super("MCQ", ++macaque_nb,'5', _weight, 0.2, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
@@ -61,11 +61,11 @@ public class Macaque extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Macaque.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*chatter*");
     }
     /**

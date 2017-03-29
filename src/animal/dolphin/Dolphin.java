@@ -22,7 +22,7 @@ public class Dolphin extends Animal {
      * @param _weight berat dolphin yang diinginkan
      * @param _position posisi dolphin yang diinginkan
      */
-    public Dolphin(double _weight, Pair _position) {
+    public Dolphin(final double _weight, final Pair _position) {
         super("DLP", ++dolphin_nb,'!', _weight, 0.2, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
@@ -41,7 +41,7 @@ public class Dolphin extends Animal {
      *
      * @param _position posisi dolphin yang diinginkan
      */
-    public Dolphin(Pair _position) {
+    public Dolphin(final Pair _position) {
         super("DLP", ++dolphin_nb,'!', 226, 0.2, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
@@ -61,11 +61,11 @@ public class Dolphin extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan dolphin.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*click*");
     }
     /**

@@ -21,7 +21,7 @@ public class Bat extends Animal {
      * @param _weight berat bat yang diinginkan
      * @param _position posisi bat yang diinginkan
      */
-    public Bat(double _weight, Pair _position) {
+    public Bat(final double _weight, final Pair _position) {
         super("BT", ++bat_nb,'*', _weight, 0.4, 'O', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
@@ -37,7 +37,7 @@ public class Bat extends Animal {
      *
      * @param _position posisi bat yang diinginkan
      */
-    public Bat(Pair _position) {
+    public Bat(final Pair _position) {
         super("BT", ++bat_nb,'*', 0.15, 0.4, 'O', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
@@ -54,11 +54,11 @@ public class Bat extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan bat.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*screech*");
     }
     /**

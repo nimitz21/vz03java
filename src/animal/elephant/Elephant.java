@@ -24,7 +24,7 @@ public class Elephant extends Animal {
      * @param _weight berat Elephant yang diinginkan
      * @param _position posisi Elephant yang diinginkan
      */
-    public Elephant(double _weight, Pair _position) {
+    public Elephant(final double _weight, final Pair _position) {
         super("ELP", ++elephant_nb,'4', _weight, 0.7, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
@@ -40,7 +40,7 @@ public class Elephant extends Animal {
      *
      * @param _position posisi Elephant yang diinginkan
      */
-    public Elephant(Pair _position) {
+    public Elephant(final Pair _position) {
         super("ELP", ++elephant_nb,'4', 5000, 0.7, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("WF"));
@@ -57,11 +57,11 @@ public class Elephant extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Elephant.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*trumpet*");
     }
     /**

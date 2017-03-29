@@ -23,7 +23,7 @@ public class Zebra extends Animal {
      * @param _weight berat zebra yang diinginkan
      * @param _position posisi zebra yang diinginkan
      */
-    public Zebra(double _weight, Pair _position) {
+    public Zebra(final double _weight, final Pair _position) {
         super("ZBR", ++zebra_nb,'3', _weight, 0.3, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
@@ -42,7 +42,7 @@ public class Zebra extends Animal {
      *
      * @param _position posisi zebra yang diinginkan
      */
-    public Zebra(Pair _position) {
+    public Zebra(final Pair _position) {
         super("ZBR", ++zebra_nb,'3', 226, 0.3, 'H', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
@@ -62,11 +62,11 @@ public class Zebra extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan zebra.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*snort*");
     }
 

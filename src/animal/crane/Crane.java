@@ -23,7 +23,7 @@ public class Crane extends Animal {
 	 * @param _weight berat burung bangau yang diinginkan
 	 * @param _position posisi burung bangau yang diinginkan
 	 */
-	public Crane(double _weight, Pair _position) {
+	public Crane(final double _weight, final Pair _position) {
 		super("CRN", ++crane_nb,'$', _weight, 0.3, 'K', _position);
 		habitat.add(new Character('W'));
 		habitat.add(new Character('A'));
@@ -51,7 +51,7 @@ public class Crane extends Animal {
 	 *
 	 * @param _position posisi burung bangau yang diinginkan
 	 */
-	public Crane(Pair _position) {
+	public Crane(final Pair _position) {
 		super("CRN", ++crane_nb,'$', 2, 0.3, 'K', _position);
 		habitat.add(new Character('W'));
 		habitat.add(new Character('A'));
@@ -80,11 +80,11 @@ public class Crane extends Animal {
 	 * F.S.: pada layar tercetak apa yang dilakukan burung bangau.
 	 */
 	public final void Act() {
-		System.out.print(id+"-");
+		System.out.print(id + "-");
 		if (number < 10) {
 			System.out.print("0");
 		}
-		System.out.print(number+": ");
+		System.out.print(number + ": ");
 		System.out.println("*hoot*");
 	}
 

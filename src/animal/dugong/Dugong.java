@@ -19,7 +19,7 @@ public class Dugong extends Animal {
      * @param _weight berat Dugong yang diinginkan
      * @param _position posisi Dugong yang diinginkan
      */
-    public Dugong(double _weight, Pair _position) {
+    public Dugong(final double _weight, final Pair _position) {
         super("DGG", ++dugong_nb,'9', _weight, 0.7, 'H', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
@@ -38,7 +38,7 @@ public class Dugong extends Animal {
      *
      * @param _position posisi Dugong yang diinginkan
      */
-    public Dugong(Pair _position) {
+    public Dugong(final Pair _position) {
         super("DGG", ++dugong_nb,'9', 294, 0.7, 'K', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("MRE"));
@@ -58,11 +58,11 @@ public class Dugong extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Dugong.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*splash*");
     }
     /**

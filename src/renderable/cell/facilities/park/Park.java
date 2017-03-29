@@ -12,7 +12,7 @@ import renderable.cell.facilities.Facility;
  */
 public class Park extends Facility {
   /**
-   *  tanaman yang ditanam di taman
+   *  tanaman yang ditanam di taman.
    */
   private String plant;
 
@@ -30,7 +30,7 @@ public class Park extends Facility {
    *
    * @param p tanaman yang ditanam di <code>Park</code>
    */
-  public Park(String p) {
+  public Park(final String p) {
     initial_symbol = new Character('P');
     symbol = new Character('P');
     plant = p;
@@ -41,7 +41,7 @@ public class Park extends Facility {
    *
    * @return plant
    */
-  public String GetPlant() {
+  public final String GetPlant() {
     return plant;
   }
 
@@ -52,7 +52,7 @@ public class Park extends Facility {
    *
    * @param p tanaman yang ingin ditanam
    */
-  public void SetPlant(String p) {
+  public void SetPlant(final String p) {
     plant = p;
   }
 
@@ -63,7 +63,7 @@ public class Park extends Facility {
    *
    * @param direction arah yang ingin dibuka
    */
-  public void ToggleSekat(int direction) {}
+  public void ToggleSekat(final int direction) { }
 
   /**
    * Dibuat hanya untuk memenuhi inheritance dari <code>Cell</code>.
@@ -71,7 +71,7 @@ public class Park extends Facility {
    * @param direction arah yang ingin dicek
    * @return false
    */
-  public boolean GetSekat(int direction) {
+  public final boolean GetSekat(final int direction) {
     return false;
   }
 
@@ -81,7 +81,7 @@ public class Park extends Facility {
    * F.S.: pada layar tercetak hasil interaksi
    * dengan <code>Park</code>, yaitu tanaman apa yang ditanam di sana.
    */
-  public void Interact() {
+  public final void Interact() {
     System.out.print("This Park has ");
     if (!"".equals(plant)) {
       System.out.print(plant);

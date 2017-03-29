@@ -22,7 +22,7 @@ public class Hog extends Animal {
      * @param _weight berat Hog yang diinginkan
      * @param _position posisi Hog yang diinginkan
      */
-    public Hog(double _weight, Pair _position) {
+    public Hog(final double _weight, final Pair _position) {
         super("HG", ++hog_nb,'6', _weight, 0.2, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
@@ -36,7 +36,7 @@ public class Hog extends Animal {
      *
      * @param _position posisi Hog yang diinginkan
      */
-    public Hog(Pair _position) {
+    public Hog(final Pair _position) {
         super("HG", ++hog_nb,'6', 68, 0.2, 'O', _position);
         habitat.add(new Character('L'));
         compatible.add(new String("ZBR"));
@@ -51,11 +51,11 @@ public class Hog extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Hog.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*grunt*");
     }
     /**

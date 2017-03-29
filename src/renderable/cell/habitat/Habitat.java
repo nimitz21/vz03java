@@ -27,7 +27,7 @@ public class Habitat extends Cell {
    *
    * @param s simbol pembeda habitat yang diinginkan
    */
-  public Habitat(char s) {
+  public Habitat(final char s) {
     int i;
     initial_symbol = new Character(s);
     symbol = new Character(s);
@@ -55,7 +55,7 @@ public class Habitat extends Cell {
    * @param direction arah yang ingin dicek
    * @return sekat dengan arah <code>direction</code>
    */
-  public boolean GetSekat(int direction) {
+  public final boolean GetSekat(final int direction) {
     return sekat[direction];
   }
 
@@ -64,5 +64,5 @@ public class Habitat extends Cell {
    * I.S.: sembarang.
    * F.S.: sama dengan keadaan semula.
    */
-  public void Interact() {}
+  public void Interact() { }
 }

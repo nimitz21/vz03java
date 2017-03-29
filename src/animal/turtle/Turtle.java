@@ -23,7 +23,7 @@ public class Turtle extends Animal {
      * @param _weight berat penyu yang diinginkan
      * @param _position posisi penyu yang diinginkan
      */
-    public Turtle(double _weight, Pair _position) {
+    public Turtle(final double _weight, final Pair _position) {
         super("TRL", ++turtle_nb,'0', _weight, 0.3, 'H', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("WHL"));
@@ -42,7 +42,7 @@ public class Turtle extends Animal {
      *
      * @param _position posisi penyu yang diinginkan
      */
-    public Turtle(Pair _position) {
+    public Turtle(final Pair _position) {
         super("TRL", ++turtle_nb,'0', 453, 0.3, 'H', _position);
         habitat.add(new Character('W'));
         compatible.add(new String("WHL"));
@@ -62,11 +62,11 @@ public class Turtle extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan penyu.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*swim*");
     }
 

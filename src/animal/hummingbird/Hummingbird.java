@@ -21,7 +21,7 @@ public class Hummingbird extends Animal {
      *
      * @param _position posisi Hummingbird yang diinginkan
      */
-    public Hummingbird(Pair _position) {
+    public Hummingbird(final Pair _position) {
         super("HMB", ++hummingbird_nb,'%', 0.0002, 0.3, 'H', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
@@ -42,7 +42,7 @@ public class Hummingbird extends Animal {
      * @param _position posisi Hummingbird yang diinginkan
      */
     
-    public Hummingbird(double _weight, Pair _position) {
+    public Hummingbird(final double _weight, final Pair _position) {
         super("HMB", ++hummingbird_nb,'%', _weight, 0.3, 'H', _position);
         habitat.add(new Character('A'));
         compatible.add(new String("HMB"));
@@ -61,11 +61,11 @@ public class Hummingbird extends Animal {
      * F.S.: pada layar tercetak apa yang dilakukan Hummingbird.
      */
     public final void Act() {
-        System.out.print(id+"-");
+        System.out.print(id + "-");
         if (number < 10) {
             System.out.print("0");
         }
-        System.out.print(number+": ");
+        System.out.print(number + ": ");
         System.out.println("*hum*");
     }
     /**
